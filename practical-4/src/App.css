@@ -1,0 +1,134 @@
+.App {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter-container {
+  background-color: white;
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.counter-container h1 {
+  font-size: 2.5em;
+  margin: 0 0 20px 0;
+  color: #333;
+  font-weight: bold;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.button-group button {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.button-group button:hover {
+  background-color: #e8e8e8;
+}
+
+.button-group button:active {
+  background-color: #d8d8d8;
+}
+
+.counter-container h2 {
+  font-size: 1.8em;
+  margin: 0 0 25px 0;
+  color: #333;
+  font-weight: bold;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.input-field label {
+  font-weight: bold;
+  color: #333;
+  min-width: 80px;
+  text-align: left;
+}
+
+.input-field input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.input-field input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.display-names {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.display-names p {
+  margin: 8px 0;
+  font-weight: bold;
+  color: #333;
+}
+
+@media (max-width: 480px) {
+  .counter-container {
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .button-group button {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .input-field {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .input-field label {
+    margin-bottom: 5px;
+  }
+  
+  .input-field input {
+    width: 100%;
+  }
+}

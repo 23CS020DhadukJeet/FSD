@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Voting System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>What's Your Favorite Programming Language?</h1>
+        
+        <div class="poll-section">
+            <div class="vote-buttons">
+                <button class="vote-btn" onclick="vote('JavaScript')">JavaScript</button>
+                <button class="vote-btn" onclick="vote('Python')">Python</button>
+                <button class="vote-btn" onclick="vote('Java')">Java</button>
+                <button class="vote-btn" onclick="vote('C++')">C++</button>
+            </div>
+        </div>
+
+        <div class="results-section">
+            <h2>Live Results</h2>
+            <div class="result-item">
+                <span class="language">JavaScript:</span>
+                <span class="vote-count" id="JavaScript">0</span> votes
+                <div class="progress-bar">
+                    <div class="progress" id="progress-JavaScript"></div>
+                </div>
+            </div>
+            <div class="result-item">
+                <span class="language">Python:</span>
+                <span class="vote-count" id="Python">0</span> votes
+                <div class="progress-bar">
+                    <div class="progress" id="progress-Python"></div>
+                </div>
+            </div>
+            <div class="result-item">
+                <span class="language">Java:</span>
+                <span class="vote-count" id="Java">0</span> votes
+                <div class="progress-bar">
+                    <div class="progress" id="progress-Java"></div>
+                </div>
+            </div>
+            <div class="result-item">
+                <span class="language">C++:</span>
+                <span class="vote-count" id="C++">0</span> votes
+                <div class="progress-bar">
+                    <div class="progress" id="progress-C++"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="total-votes">
+            Total Votes: <span id="total-votes">0</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
