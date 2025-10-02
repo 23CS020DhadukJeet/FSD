@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students - Tuition Admin Panel</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1><a href="/">Tuition Admin Panel</a></h1>
+            <a href="/add" class="btn btn-primary">Add Student</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h2>Students List</h2>
+
+        <% if (students.length===0) { %>
+            <div class="empty-state">
+                <p>No students found. <a href="/add">Add the first student</a></p>
+            </div>
+            <% } else { %>
+                <div class="table-container">
+                    <table class="students-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Grade</th>
+                                <th>Subject</th>
+                                <th>Fees Status</th>
+                                <th>Joining Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% students.forEach(student=> { %>
+                                <tr>
+                                    <td>
+                                        <%= student.name %>
+                                    </td>
+                                    <td>
+                                        <%= student.email %>
+                                    </td>
+                                    <td>
+                                        <%= student.phone %>
+                                    </td>
+                                    <td>
+                                        <%= student.grade %>
+                                    </td>
+                                    <td>
+                                        <%= student.subject %>
+                                    </td>
+                                    <td>
+                                        <span class="status <%= student.feesPaid ? 'paid' : 'pending' %>">
+                                            <%= student.feesPaid ? 'Paid' : 'Pending' %>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <%= new Date(student.joiningDate).toLocaleDateString() %>
+                                    </td>
+                                    <td class="actions">
+                                        <a href="/edit/<%= student._id %>" class="btn btn-secondary">Edit</a>
+                                        <form method="POST" action="/delete/<%= student._id %>?_method=DELETE"
+                                            style="display: inline;">
+                                            <button type="submit" class="btn btn-danger"
+                                                onclick="return confirm('Are you sure?')">Delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+                <% } %>
+    </main>
+</body>
+
+</html>

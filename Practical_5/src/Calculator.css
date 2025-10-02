@@ -1,0 +1,155 @@
+.calculator {
+  background: #2c3e50;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  max-width: 320px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.display {
+  background: #34495e;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: right;
+}
+
+.display-value {
+  color: #ecf0f1;
+  font-size: 2.5rem;
+  font-weight: 300;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.keypad {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-keys {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.function-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.digit-keys {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.keys-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.bottom-row {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.operator-keys {
+  display: flex;
+  gap: 10px;
+}
+
+.key {
+  background: #34495e;
+  border: none;
+  border-radius: 50px;
+  color: #ecf0f1;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 400;
+  height: 60px;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.key:hover {
+  background: #4a6278;
+  transform: scale(1.05);
+}
+
+.key:active {
+  transform: scale(0.95);
+}
+
+.key-clear {
+  background: #e74c3c !important;
+  color: white;
+}
+
+.key-clear:hover {
+  background: #c0392b !important;
+}
+
+.key-divide,
+.key-multiply,
+.key-subtract {
+  background: #e74c3c;
+  color: white;
+}
+
+.key-divide:hover,
+.key-multiply:hover,
+.key-subtract:hover {
+  background: #c0392b;
+}
+
+.key-add,
+.key-equals {
+  background: #e74c3c;
+  color: white;
+}
+
+.key-add:hover,
+.key-equals:hover {
+  background: #c0392b;
+}
+
+.key-0 {
+  grid-column: 1 / 2;
+}
+
+.key-dot {
+  grid-column: 2 / 3;
+}
+
+.key-equals {
+  grid-column: 3 / 4;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .calculator {
+    margin: 20px;
+    max-width: 100%;
+    padding: 15px;
+  }
+  
+  .display-value {
+    font-size: 2rem;
+    min-height: 50px;
+  }
+  
+  .key {
+    height: 50px;
+    font-size: 1rem;
+  }
+}

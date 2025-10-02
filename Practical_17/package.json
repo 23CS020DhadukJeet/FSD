@@ -1,0 +1,28 @@
+{
+    "name": "tuition-admin-panel",
+    "version": "1.0.0",
+    "description": "Admin panel for managing tuition class students",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "nodemon server.js"
+    },
+    "dependencies": {
+        "express": "^4.18.2",
+        "mongoose": "^7.5.0",
+        "ejs": "^3.1.9",
+        "method-override": "^3.0.0"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.1"
+    },
+    "keywords": [
+        "admin",
+        "tuition",
+        "student",
+        "mongodb",
+        "express"
+    ],
+    "author": "",
+    "license": "MIT"
+}

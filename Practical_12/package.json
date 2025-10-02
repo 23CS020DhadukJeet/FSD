@@ -1,0 +1,25 @@
+{
+    "name": "kids-calculator",
+    "version": "1.0.0",
+    "description": "A simple web-based calculator for kids",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "dev": "nodemon app.js"
+    },
+    "dependencies": {
+        "ejs": "^3.1.10",
+        "express": "^4.18.2"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.1"
+    },
+    "keywords": [
+        "calculator",
+        "kids",
+        "express",
+        "nodejs"
+    ],
+    "author": "",
+    "license": "MIT"
+}

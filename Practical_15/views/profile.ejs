@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Portal - Profile</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>📚 Library Portal</h1>
+            <h2>Welcome back, <%= user.name %>!</h2>
+
+            <div class="session-info">
+                <h3>Session Information</h3>
+                <div class="info-item">
+                    <strong>Name:</strong>
+                    <%= user.name %>
+                </div>
+                <div class="info-item">
+                    <strong>Login Time:</strong>
+                    <%= user.loginTime %>
+                </div>
+            </div>
+
+            <div class="actions">
+                <form action="/logout" method="POST" style="display: inline;">
+                    <button type="submit" class="btn btn-logout">Logout</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

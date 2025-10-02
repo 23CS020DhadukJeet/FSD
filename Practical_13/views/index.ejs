@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Form - Income Calculator</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Tax Form Income Calculator</h1>
+            <p>Enter your income from two sources to calculate total income, tax, and final net income</p>
+        </header>
+
+        <main>
+            <form action="/calculate" method="POST" class="income-form">
+                <div class="form-group">
+                    <label for="income1">Income Source 1 ($):</label>
+                    <input type="number" id="income1" name="income1" step="0.01" min="0" value="<%= income1 %>"
+                        placeholder="Enter amount from first income source" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="income2">Income Source 2 ($):</label>
+                    <input type="number" id="income2" name="income2" step="0.01" min="0" value="<%= income2 %>"
+                        placeholder="Enter amount from second income source" required>
+                </div>
+
+                <button type="submit" class="calculate-btn">Calculate Income & Tax</button>
+            </form>
+
+            <% if (errors && errors.length> 0) { %>
+                <div class="error-messages">
+                    <h3>Please fix the following errors:</h3>
+                    <ul>
+                        <% errors.forEach(error=> { %>
+                            <li>
+                                <%= error %>
+                            </li>
+                            <% }); %>
+                    </ul>
+                </div>
+                <% } %>
+
+                    <% if (totalIncome !==null) { %>
+                        <div class="result">
+                            <h2>Income & Tax Calculation</h2>
+                            <div class="income-breakdown">
+                                <p>Income Source 1: $<%= parseFloat(income1).toFixed(2) %>
+                                </p>
+                                <p>Income Source 2: $<%= parseFloat(income2).toFixed(2) %>
+                                </p>
+                                <hr>
+                                <p class="total">Total Gross Income: $<%= totalIncome %>
+                                </p>
+                                <p style="color: #dc3545; font-weight: bold;">Tax (<%= taxRate %>%): -$<%= taxAmount %>
+                                </p>
+                                <hr style="border-top: 2px solid #dc3545;">
+                                <p class="total" style="color: #28a745; font-size: 22px;">Final Net Income: $<%=
+                                        finalIncome %>
+                                </p>
+                            </div>
+                        </div>
+                        <% } %>
+        </main>
+    </div>
+</body>
+
+</html>

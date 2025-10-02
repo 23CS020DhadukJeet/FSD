@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Portal - Login</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>📚 Library Portal</h1>
+            <h2>Welcome! Please sign in</h2>
+
+            <% if (typeof error !=='undefined' ) { %>
+                <div class="error">
+                    <%= error %>
+                </div>
+                <% } %>
+
+                    <form action="/login" method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Name:</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your name">
+                        </div>
+                        <button type="submit" class="btn">Sign In</button>
+                    </form>
+        </div>
+    </div>
+</body>
+
+</html>
