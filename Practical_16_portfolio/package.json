@@ -1,5 +1,5 @@
 {
-    "name": "practical_16_portfolio",
+  "name": "practical_16_portfolio",
   "version": "1.0.0",
   "description": "Freelance portfolio with Express + NodeMailer contact form",
   "main": "server.js",
@@ -17,14 +17,5 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.0"
-    },
-    "keywords": [
-        "portfolio",
-        "freelance",
-        "contact-form",
-        "nodejs",
-        "express"
-    ],
-    "author": "Your Name",
-    "license": "MIT"
+  }
 }
